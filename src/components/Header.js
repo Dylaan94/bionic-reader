@@ -1,6 +1,7 @@
+import HeaderStyles from "./styles/HeaderStyles";
+
 const Header = () => {
-    return (<div> I am a header </div>)
+  return <HeaderStyles.HeaderMain><h1>Bionic Reader</h1></HeaderStyles.HeaderMain>;
+};
 
-}
-
-export default Header
+export default Header;
