@@ -1,8 +1,11 @@
 import { React, useState } from "react";
 
+// add sanitizor 
+
 const MainComponent = () => {
   const [text, setText] = useState("");
-  const [updatedText, setUpdatedText] = useState("");
+  const [convertedText, setConvertedText] = useState("");
+  const [isConverted, setIsConverted] = useState(false);
 
   const handleText = () => {
     let textArr = text.split(" ");
@@ -15,23 +18,39 @@ const MainComponent = () => {
         return "<b>" + e + "</b>";
       } else {
         substring = e.slice(0, strLen);
-        return e.replace(substring, "<b>" + substring + "</b>");
+        return e.replace(substring, "<Strong>" + substring + "</Strong>");
       }
-        
     });
 
-    console.log(newArr);
+    setConvertedText(newArr.join(" "));
+    setIsConverted(true);
+
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        onChange={(e) => setText(e.target.value)}
-        value={text}
-      ></input>
-      <button onClick={() => handleText()}> convert </button>
-    </div>
+    <>
+      {!isConverted ? (
+        <div>
+          <input
+            type="text"
+            onChange={(e) => setText(e.target.value)}
+            value={text}
+          ></input>
+          <button onClick={() => handleText()}> convert </button>
+        </div>
+      ) : (
+        <>
+          <div dangerouslySetInnerHTML={{ __html: convertedText }}></div>
+          <button
+            onClick={() => {
+              setIsConverted(false);
+            }}
+          >
+            Go back
+          </button>
+        </>
+      )}
+    </>
   );
 };
 
