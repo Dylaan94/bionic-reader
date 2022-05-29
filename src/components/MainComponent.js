@@ -34,13 +34,20 @@ const MainComponent = () => {
           <div className="inputDiv">
             <textarea
               type="text"
-              placeholder="paste text here"
+              placeholder="paste text here..."
               onChange={(e) => setText(e.target.value)}
               value={text}
             ></textarea>
-            <div className="inputButtonsDiv">
-              <button onClick={() => handleText()}> convert </button>
-              <button onClick={() => setText("")}> clear </button>
+            <div className="inputButtons">
+              <button className="convertBtn" onClick={() => handleText()}>
+                convert
+              </button>
+              <button className="clearBtn" onClick={() => {
+                setText("")
+                setConvertedText("")
+              }}>
+                clear
+              </button>
             </div>
           </div>
         </MainComponentStyles.InputDiv>
@@ -48,9 +55,12 @@ const MainComponent = () => {
         <>
           <MainComponentStyles.DisplayDiv>
             <div className="displayDiv">
-              <div className = "convertedText" dangerouslySetInnerHTML={{ __html: convertedText }}></div>
-              <div className="displayButtonsDiv">
-                <button
+              <div
+                className="convertedText"
+                dangerouslySetInnerHTML={{ __html: convertedText }}
+              ></div>
+              <div className="displayButtons">
+                <button className="goBackBtn"
                   onClick={() => {
                     setIsConverted(false);
                   }}
