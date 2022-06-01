@@ -26,6 +26,7 @@ const HeaderMain = styled.div`
     text-decoration: none;
     p {
       font-size: 0.5em;
+      margin-left: 5px;
     }
   }
 

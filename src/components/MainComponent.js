@@ -42,10 +42,13 @@ const MainComponent = () => {
               <button className="convertBtn" onClick={() => handleText()}>
                 convert
               </button>
-              <button className="clearBtn" onClick={() => {
-                setText("")
-                setConvertedText("")
-              }}>
+              <button
+                className="clearBtn"
+                onClick={() => {
+                  setText("");
+                  setConvertedText("");
+                }}
+              >
                 clear
               </button>
             </div>
@@ -60,7 +63,8 @@ const MainComponent = () => {
                 dangerouslySetInnerHTML={{ __html: convertedText }}
               ></div>
               <div className="displayButtons">
-                <button className="goBackBtn"
+                <button
+                  className="goBackBtn"
                   onClick={() => {
                     setIsConverted(false);
                   }}
