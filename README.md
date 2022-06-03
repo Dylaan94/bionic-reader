@@ -10,3 +10,6 @@ A web app for converting text into a more readable format by emboldening the fir
 - Change font size
 - Change spacing (Done!)
 - Download as PDF
+
+## Demo
+- Try it out here: https://dylaan94.github.io/bionic-reader/
