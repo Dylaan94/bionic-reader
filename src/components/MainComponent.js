@@ -31,6 +31,8 @@ const MainComponent = () => {
     setIsConverted(true);
   };
 
+
+  // if converted is clicked, show data from converted state, otherwise show blank page
   return (
     <>
       {!isConverted ? (
