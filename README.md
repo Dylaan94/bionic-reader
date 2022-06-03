@@ -8,5 +8,5 @@ A web app for converting text into a more readable format by emboldening the fir
 
 ## Future Features
 - Change font size
-- Change spacing
+- Change spacing (Done!)
 - Download as PDF

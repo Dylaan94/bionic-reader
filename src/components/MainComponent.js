@@ -9,13 +9,17 @@ const MainComponent = () => {
   const [isConverted, setIsConverted] = useState(false);
 
   const handleText = () => {
-    let textArr = text.split(" ");
+    // splits text at space and linebreak
+    let textArr = text.split(/( |\n)/);
 
     let newArr = textArr.map((e) => {
       let strLen = Math.floor(e.length / 2);
       let substring = "";
 
-      if (strLen === 0) {
+      if (e === "\n") {
+        // add linebreak
+        return "<br>"
+      } else if (strLen === 0) {
         return "<b>" + e + "</b>";
       } else {
         substring = e.slice(0, strLen);
