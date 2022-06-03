@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bionic-reader/static/css/main.1483d0d3.css",
+    "main.js": "/bionic-reader/static/js/main.1905aeae.js",
+    "static/js/787.627a6480.chunk.js": "/bionic-reader/static/js/787.627a6480.chunk.js",
+    "index.html": "/bionic-reader/index.html",
+    "main.1483d0d3.css.map": "/bionic-reader/static/css/main.1483d0d3.css.map",
+    "main.1905aeae.js.map": "/bionic-reader/static/js/main.1905aeae.js.map",
+    "787.627a6480.chunk.js.map": "/bionic-reader/static/js/787.627a6480.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1483d0d3.css",
+    "static/js/main.1905aeae.js"
+  ]
+}
